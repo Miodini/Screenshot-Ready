@@ -1,0 +1,29 @@
+{
+	"name": "Screenshot Ready",
+	"description": "Toggles YT video UI elements on and off",
+	"version": "1.0",
+	"manifest_version": 3,
+	"background": {
+		"service_worker": "background.js"
+	},
+
+	"permissions": ["storage", "activeTab", "scripting", "declarativeContent"],
+	"action": {
+		"default_icon": {
+			"16": "img/icon16.png",
+			"32": "img/icon32.png",
+			"48": "img/icon48.png",
+			"128": "img/icon128.png"
+		}
+	},
+	"commands": {
+		"_execute_action": {
+		  	"suggested_key": {
+				"windows": "Ctrl+K",
+				"linux": "Ctrl+K",
+				"mac": "Command+K",
+				"default": "Ctrl+K"
+		  	}
+		}
+	}
+}
