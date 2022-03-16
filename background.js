@@ -23,5 +23,15 @@ chrome.action.onClicked.addListener((tab) => {
 	  	target: {tabId: tab.id},
 	  	files: ['content.js']
 	})
+	// Updates the badge
+	chrome.storage.local.get("isOn", ({isOn}) => {
+        if(isOn){
+			chrome.action.setBadgeText({text: ''})
+		}
+        else{
+			chrome.action.setBadgeText({text: 'ON'})
+			chrome.action.setBadgeBackgroundColor({color: '#fe0000'})
+        }
+    })
 })
 
